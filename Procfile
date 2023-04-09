@@ -1,1 +1,1 @@
-web: gunicorn guild_wars_2_blog.wsgi
+web: gunicorn guild_wars_2.wsgi
