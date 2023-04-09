@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_stoarage',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary'
     'guild_wars_2_blog',
