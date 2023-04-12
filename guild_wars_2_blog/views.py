@@ -51,7 +51,7 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-        else: 
+        else:
             comment_form = CommentForm()
 
         return render(
@@ -67,11 +67,10 @@ class PostDetail(View):
         )
 
 
-class PostLike(view):
+class PostLike(View):
 
-    def post(self, request, slug):
-        post(get_object_or_404(Post, slug=slug))
-
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
