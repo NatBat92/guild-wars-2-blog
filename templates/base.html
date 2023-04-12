@@ -26,7 +26,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home %'}"><span class="brand">Guild Wars 2 Blog</a>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">The Guild Wars 2 Blog</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home %'}">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -50,7 +50,7 @@
                     {% endif %}
                 </ul>
                 <span class="navbar-text text-muted">
-                    Your go-to place for Guild Wars 2 Information
+                    Blogging about my Guild Wars 2 Adventure
                 </span>
             </div>
         </div>
