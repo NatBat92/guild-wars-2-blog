@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comments
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -12,7 +12,8 @@ class PostAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'created_on')
     summernote_fields = ('content')
 
-@admin.register(Comment)
+
+@admin.register(Comments)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
