@@ -2,6 +2,24 @@
 
 {% block content %}
 
+<header>
+    <div class="container-fluid" id="image">
+        <div class=" text-center">
+            <img class="img-fluid"
+                src="https://res.cloudinary.com/ddswglojm/image/upload/v1681743296/guildwars-2-hero-image_small_zvpkkq.jpg"
+                alt="Background image">
+            <div class="col-lg-6 mx-auto">
+                <div class="caption">
+                    <div class="text-center-caption">
+                        <h1 class="post-title fw-bolder text-uppercase">GUILD WARS 2 BLOG</h1>
+                        <h6 class="post-subtitle fw-bold">Come follow my adventure</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
 <div class="container-fluid">
     <div class="row">
 
@@ -15,9 +33,9 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                    src="https://res.cloudinary.com/ddswglojm/image/upload/v1681294773/ykkga3cracblnx5ijog7.jpg">
                                 {% else %}
-                                <img clss="card-img-top" src="{{ post.featured_image.url}}">
+                                <img class="card-img-top" src="{{ post.featured_image.url}}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>

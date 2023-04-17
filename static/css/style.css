@@ -1,5 +1,6 @@
 body {
     background-color: #F9FAFC;
+    font-family: 'Caveat'
 }
 
 .brand {
@@ -26,12 +27,23 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: black;
 }
 
 .card {
-    border: none;
-    background-color: transparent;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 3px solid rgba(6, 148, 225, 0.589);
+        border-radius: .25rem;
+    }
+
+.card-img-top {
+    width: 100%;
 }
 
 .image-container {
@@ -70,6 +82,7 @@ body {
 .masthead-image {
     position: relative;
     overflow: hidden;
+    margin-top: 5%;
 }
 
 .masthead-image:after {
@@ -79,7 +92,6 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -97,8 +109,9 @@ body {
 }
 
 .post-title {
-    margin-top: 20%;
+    margin-top: 5%;
     margin-left: 5%;
+    color: white;
 }
 
 .post-subtitle {
@@ -139,4 +152,20 @@ body {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+hr {
+    color: white;
+}
+
+.img-fluid {
+    margin-top: 5%;
+}
+
+.post-image {
+    width: 100%;
+}
+
+.rounded-pill {
+    border-radius: 50rem!important;
 }
