@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<header>
+    <div class="container-fluid" id="image">
+        <div class=" text-center">
+            <img class="img-fluid"
+                src="https://res.cloudinary.com/ddswglojm/image/upload/v1681743296/guildwars-2-hero-image_small_zvpkkq.jpg"
+                alt="Background image">
+        </div>
+    </div>
+  </header>
+
+<form class="text-center m-3" action="." method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.media }}
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
+    {{ form.as_p }}
+    <button class="btn btn-signup right" id="button">Post &raquo;</button>
+</form>
+
+<script>
+    var name = "{{ user.id }}";
+    document.getElementById("user").value = name;
+</script>
+
+{%endblock%}

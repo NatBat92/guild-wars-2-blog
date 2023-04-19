@@ -27,6 +27,7 @@ ALLOWED_HOSTS = ['gw2-blog.herokuapp.com', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'ckeditor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -86,6 +87,22 @@ TEMPLATES = [
         },
     },
 ]
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [
+            ['-', 'Bold', 'Italic', 'Underline', 'Undo', 'Redo',
+             '-', 'Link', 'Unlink', 'Anchor',
+             '-', 'NumberedList', 'BulletedList', 'Outdent', 'Indent', 'Blockquote',
+             '-', 'Styles', 'Format',
+             '-', 'Image',
+             '-', 'Source',
+             '-', 'Maximize',
+             ],
+        ],
+        'width': 'auto',
+    },
+}
 
 WSGI_APPLICATION = 'guild_wars_2.wsgi.application'
 
