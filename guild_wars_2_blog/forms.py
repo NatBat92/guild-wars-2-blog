@@ -17,9 +17,9 @@ class PostForm (forms.ModelForm):
 
         widgets = {
             'title': forms.TextInput(attrs={'placeholder':
-                                            'Give it a catchy title'}),
+                                            'Title of the post'}),
             'excerpt': forms.TextInput(attrs={'placeholder':
-                                              'E.g. My first ever post'}),
+                                              'Summary of post'}),
             'author': forms.TextInput(
                 attrs={'class': 'form-control', 'value': '',
                        'id': 'user', 'type': 'hidden'}),

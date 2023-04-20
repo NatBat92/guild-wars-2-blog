@@ -1,12 +1,15 @@
 from django.shortcuts import render, get_object_or_404, reverse
-
-from django.views import generic, View
+from django.views.generic import (
+    View, CreateView, ListView, UpdateView, DeleteView)
 from django.http import HttpResponseRedirect
+from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
+from django.contrib.auth.views import PasswordChangeView
+from django.urls import reverse_lazy
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, PostForm, EditProfileForm, PasswordChangingForm
 
 
-class PostList(generic.ListView):
+class PostList(ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
@@ -77,3 +80,9 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class AddPost(CreateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'create_post.html'
