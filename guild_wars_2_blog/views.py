@@ -86,3 +86,35 @@ class AddPost(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'create_post.html'
+
+class UpdatePostView(UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'update_post.html'
+
+
+class DeletePostView(DeleteView):
+    model = Post
+    template_name = 'delete_post.html'
+    success_url = reverse_lazy('home')
+
+
+class UserEditView(UpdateView):
+    form_class = EditProfileForm
+    template_name = 'edit_profile.html'
+
+    success_url = reverse_lazy('home')
+
+    def get_object(self):
+        return self.request.user
+
+
+class PasswordsChangeView(PasswordChangeView):
+    model = Post
+    template_name = 'change_password.html'
+    form_class = PasswordChangingForm
+    success_url = reverse_lazy('password_success')
+
+
+def password_success(request):
+    return render(request, 'password_success.html', {})

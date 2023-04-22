@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<header>
+    <div class="container-fluid" id="image">
+        <div class=" text-center">
+            <img class="img-fluid"
+                src="https://res.cloudinary.com/ddswglojm/image/upload/v1681743296/guildwars-2-hero-image_small_zvpkkq.jpg"
+                alt="Background image">
+            <div class="col-lg-6 mx-auto">
+                <div class="caption">
+                    <div class="text-center-caption">
+                        <h1 class="post-title fw-bolder text-uppercase">GUILD WARS 2 BLOG</h1>
+                        <h6 class="post-subtitle fw-bold">Come follow my adventure</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<form class="text-center m-3" action="." method="POST">
+    {% csrf_token %}
+    <strong>Are you sure you want to send this post to the mists? unlike Rytlock, once gone it can't be brought back</strong>
+
+    <p><button class="btn btn-signup center m-3" id="button">Yep, send it &raquo;</button></p>
+</form>
+
+{%endblock%}
