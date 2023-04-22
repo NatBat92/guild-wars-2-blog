@@ -5,6 +5,10 @@ body {
     font-size: 150%;
 }
 
+.navbar-toggler-icon {
+    color: white;
+}
+
 .navbar {
     background-color: #23BBBB;
 }
@@ -64,6 +68,7 @@ nav a:hover,
         background-clip: border-box;
         border: 3px solid rgba(6, 148, 225, 0.589);
         border-radius: .25rem;
+        color: black;
     }
 
 .card-img-top {
@@ -186,7 +191,7 @@ hr {
 }
 
 .img-fluid {
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .post-image {

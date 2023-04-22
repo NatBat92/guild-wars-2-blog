@@ -87,6 +87,7 @@ class AddPost(CreateView):
     form_class = PostForm
     template_name = 'create_post.html'
 
+
 class UpdatePostView(UpdateView):
     model = Post
     form_class = PostForm
@@ -117,4 +118,4 @@ class PasswordsChangeView(PasswordChangeView):
 
 
 def password_success(request):
-    return render(request, 'password_success.html', {})
+    return render(request, 'password_changed_success.html', {})
