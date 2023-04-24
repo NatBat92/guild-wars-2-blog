@@ -17,7 +17,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = False
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+DEBUG = True
 
 ALLOWED_HOSTS = ['gw2-blog.herokuapp.com', 'localhost']
 
