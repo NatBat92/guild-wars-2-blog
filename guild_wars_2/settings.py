@@ -25,6 +25,7 @@ ALLOWED_HOSTS = ['gw2-blog.herokuapp.com', 'localhost']
 
 INSTALLED_APPS = [
     'ckeditor',
+    'ckeditor_uploader',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
