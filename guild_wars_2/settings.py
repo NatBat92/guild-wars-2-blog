@@ -21,7 +21,8 @@ DEBUG = False
 
 # X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['gw2-blog.herokuapp.com', 'localhost']
+# ALLOWED_HOSTS = ['gw2-blog.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
