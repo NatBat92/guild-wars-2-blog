@@ -19,7 +19,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['gw2-blog.herokuapp.com', 'localhost']
 
