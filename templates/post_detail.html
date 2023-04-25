@@ -24,40 +24,49 @@
 
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">
+        <div class="col card mb-4 mt-3 left top">
+            <div class="card-body mb-3">
+                <p class="card-text">
                     {{ post.content | safe }}
-                </p>
-                <div class="row">
-                    <div class="col-1">
-                        <strong>
-                            {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                                {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="fas fa-heart"></i></button>
+                    <div class="row">
+                        <div>
+                            <strong>
+                                {% if user.is_authenticated %}
+                                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    {% if liked %}
+                                    <button type="submit" name="blogpost_id" aria-label="Like post"
+                                        value="{{post.slug}}" class="btn-like"><i
+                                            class="fas fa-heart text-decoration-none"></i></button>
+                                    {% else %}
+                                    <button type="submit" name="blogpost_id" aria-label="Like post"
+                                        value="{{post.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                                    {% endif %}
+                                </form>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="far fa-heart"></i></button>
+                                <span class="text-secondary"><i class="far fa-heart custom-tooltip"
+                                        data-toggle="tooltip"
+                                        title="You must create an account or log in to like a post."></i></span>
                                 {% endif %}
-                            </form>
-                            {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
-                            {% endif %}
-                            <span class="text-secondary">{{ post.number_of_likes }} </span>
-                        </strong>
+                                <span class="text-secondary">{{ post.number_of_likes }}</span>
+                            </strong>
+                            {% with comments.count as total_comments %}
+                            <div class="text-secondary d-inline">
+                                <i class="far fa-comments m-1 custom-tooltip" data-toggle="tooltip"
+                                    title="You must create an account or log in to comment."></i>
+                                {{ total_comments }}
+                            </div>
+                            {% endwith %}
+                        </div>
+                        {% if user.id == post.author.id %}
+                        <small>
+                            <p>
+                                <a href="{% url 'edit_post' post.slug %}">Edit</a> // <a
+                                    href="{% url 'delete' post.slug %}">Delete</a>
+                            </p>
+                        </small>
+                        {% endif %}
                     </div>
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            {{ total_comments }}</strong>
-                        {% endwith %}
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -68,7 +77,9 @@
     </div>
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>Comments:</h3>
+            <div style="padding: 10px;">
+                <h3 class="post-title fw-bolder m-1 text-uppercase">Comments:</h3>
+            </div>
             <div class="card-body">
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
@@ -79,32 +90,33 @@
                         </span> wrote:
                     </p>
                     {{ comment.body | linebreaks }}
+                    <hr>
                 </div>
                 {% endfor %}
             </div>
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                <!-- For later -->
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
-                    For moderation purposes your comment is awaiting approval
+                    Your comment is awaiting approval
                 </div>
                 {% else %}
-
                 {% if user.is_authenticated %}
-
-                <h3>Post your thoughts:</h3>
-                <p>Username: {{ user.username }}</p>
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-long">Submit</button>
+                    <button type="submit" class="btn btn-signup right mt-3" id="button">Submit &raquo;</button>
                 </form>
-
+                {% else %}
+                <h6>To leave a comment or like a post, please log in. If you have not created an account yet, then <a
+                        class="link text-decoration-underline" id="comment-signup"
+                        href="{% url 'account_signup' %}">sign up</a>.
+                </h6>
                 {% endif %}
                 {% endif %}
-
             </div>
         </div>
     </div>

@@ -91,7 +91,7 @@ class AddPost(CreateView):
 class UpdatePostView(UpdateView):
     model = Post
     form_class = PostForm
-    template_name = 'update_post.html'
+    template_name = 'edit_post.html'
 
 
 class DeletePostView(DeleteView):
