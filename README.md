@@ -19,7 +19,7 @@
 
 This website was created to complete the fourth Milestone Project for Code Insitute's Full Stack Software Developer course. I built this from the ground up using knowledge I gained from the previous modules. The objective of this project is to showcase my ability to create a true Full Stack application using the Django framework. The full list of technologies used can be found in the technologies section further down.
 
-Users of this website are able to create, read, update and delete posts regarding any subject in the gaming industry.
+Users of this website are able to create, read, update and delete posts regarding guild wars 2.
 
 You can find the link to the live website right [here]
 Please note: To open any links in this document in a new browser tab, please press CTRL + Click.
@@ -45,7 +45,7 @@ Please note: To open any links in this document in a new browser tab, please pre
 * As a Frequent User, I can comment on a blog post with my thoughts on the subject.
 * As a Frequent User, I can like a post to show that I enjoyed it.
 * As a Frequent User, I can change aspects of my personal account details.
-* As a Frequent User, I can change my password incase their is a security risk.
+* As a Frequent User, I can change my password in case there was a security risk.
 </details>
 
 <details><summary>Admin User Goals</summary>
@@ -63,15 +63,15 @@ Please note: To open any links in this document in a new browser tab, please pre
 
 * Home Page Desktop + Mobile:
 
-![landing-page-wireframe](media/home-page-wireframe.jpg)
+![home-page-wireframe](media/home-page-wireframe.jpg)
 
 * Create a Post:
 
-![post-content-wireframe](media/create-post-wireframe.jpg)
+![create-a-post-wireframe](media/create-post-wireframe.jpg)
 
 * Edit Profile:
 
-![add-post-wireframe](media/edit-profile-wireframe.jpg)
+![edit-profile-wireframe](media/edit-profile-wireframe.jpg)
 
 * Log In:
 
@@ -79,14 +79,14 @@ Please note: To open any links in this document in a new browser tab, please pre
 
 </details>
 
-<details><summary>Imagery</summary>
+<details><summary>Images</summary>
 The images you are greeted to when entering the website are of varying style. Most of the photos you will see are uploaded by the user, but the header image will always be as shown below. This is also used as the placeholder image when a user chooses to not upload a photo to their post.
 
 ![Imagery](header image)
 </details>
 
 <details><summary>Color Scheme</summary>
-Three colors are used in this website, these being #000000, #FFFFFF and #FF0030. The background, text and foreground colors have a sufficient contrast ratio to aid with accessibility.
+Four colors are used in this website, these being #23BBBB, #F9FAFC and #313132 and black. The background, text and foreground colors have a sufficient contrast ratio to aid with accessibility.
 
 </details>
 
@@ -365,45 +365,33 @@ To ensure all code for the Guild Wars 2 blog was correct, validation through var
    
 * Python Validation
 
-  All Python code was checked with the [PEP8 Online Service](http://pep8online.com/).
+  All Python code was checked with the Code Institutes Python linter.
 
   <details>
   <summary>admin.py</summary>
 
-  ![image]
-
-  </details>
-  <details>
-  <summary>apps.py</summary>
-
-  ![image]
-
-  </details>
-  <details>
-  <summary>forms.py</summary>
-
-  ![image]
-
-  </details>
-  <details>
-  <summary>models.py</summary>
-
-  ![image]
-
-  </details>
-  <details>
-  <summary>urls.py</summary>
-
-  ![image]
+  ![image](media/admin.py-python-pass.jpg)
 
   </details>
   <details>
   <summary>views.py</summary>
 
-  ![image]
+  ![image](media/views.py-python-pass.jpg)
 
   </details>
+  <details>
+  <summary>forms.py</summary>
 
+  ![image](media/forms.py-python-pass.jpg)
+
+  </details>
+  <details>
+  <summary>models.py</summary>
+
+  ![image](media/models.py-python-pass.jpg)
+
+  </details>
+ 
 * Accessibility
 
   The websites accessibility was tested with lighthouse in the Dev tools.
@@ -432,7 +420,7 @@ To ensure all code for the Guild Wars 2 blog was correct, validation through var
 
 ## Bugs
 
-
+The main bug I came accross was getting the CKeditor to show up when the project had been deployed. This was solved by adding a javascript script to the top of the base html page.
 
 ***
 
@@ -448,3 +436,5 @@ To ensure all code for the Guild Wars 2 blog was correct, validation through var
 ***
 
 # Credits
+
+I would like to thank my mento Andre for his help in pointing out improvements I can try for my code and also my partner Emma for taking the time to test my project so I could document the things she found.
