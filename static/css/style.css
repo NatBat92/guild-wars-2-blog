@@ -1,3 +1,5 @@
+/* page */
+
 body {
     background-color: #F9FAFC;
     font-family: 'Pangolin';
@@ -5,8 +7,42 @@ body {
     font-size: 150%;
 }
 
+.brand {
+    font-family: Lato, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #23BBBB;
+}
+
+.thin {
+    font-weight: 300;
+}
+
+.light-bg {
+    background-color: #fff;
+}
+
+.dark-bg {
+    background-color: #23BBBB;
+}
+
+.main-bg {
+    background-color: black;
+}
+
+.img-fluid {
+    margin-top: 3%;
+}
+
+/* navigation */
+
 .navbar {
     background-color: #23BBBB;
+}
+
+.dropdown-menu {
+    background-color: #23BBBB;
+    border: 2px solid white;
 }
 
 .navbar-toggler-icon {
@@ -39,28 +75,7 @@ nav a:hover,
     color: #313132;
 }
 
-.brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #23BBBB;
-}
-
-.thin {
-    font-weight: 300;
-}
-
-.light-bg {
-    background-color: #fff;
-}
-
-.dark-bg {
-    background-color: #23BBBB;
-}
-
-.main-bg {
-    background-color: black;
-}
+/* card */
 
 .card {
         position: relative;
@@ -152,17 +167,6 @@ nav a:hover,
     color: lightgray;
 }
 
-.btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
-}
-
 .link {
     color: #23BBBB;
     text-decoration: none;
@@ -172,6 +176,27 @@ nav a:hover,
 .link:active {
     color: #445261;
     text-decoration: underline;
+}
+
+.post-image {
+    width: 100%;
+}
+
+.rounded-pill {
+    border-radius: 50rem!important;
+}
+
+/* forms/ buttons */
+
+.btn-signup {
+    background-color: #23BBBB;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
 }
 
 .btn {
@@ -192,21 +217,4 @@ hr {
 
 #sign-in {
     text-align: center;
-}
-
-.img-fluid {
-    margin-top: 3%;
-}
-
-.post-image {
-    width: 100%;
-}
-
-.rounded-pill {
-    border-radius: 50rem!important;
-}
-
-.dropdown-menu {
-    background-color: #23BBBB;
-    border: 2px solid white;
 }
