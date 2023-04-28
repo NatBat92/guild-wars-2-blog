@@ -21,7 +21,7 @@ This website was created to complete the fourth Milestone Project for Code Insit
 
 Users of this website are able to create, read, update and delete posts discussing the PC game 'Guild Wars 2'.
 
-You can find the link to the live website right [here]
+You can find the link to the live website right [here](https://gw2-blog.herokuapp.com/)
 Please note: To open the links in this document in a new browser tab, please hold CTRL + Click the link.
 
 ![image](media/am-i-responsive.jpg)
@@ -82,7 +82,7 @@ Please note: To open the links in this document in a new browser tab, please hol
 <details><summary>Images</summary>
 The images you first see when you connect to the website are of varying style. Most of the photos you will see are uploaded by the user, but the header image will always be as shown below. This is also used as the placeholder image when a user chooses to not upload a photo to their post.
 
-![Imagery](header image)
+![Imagery](media/hero-image-snip.jpg)
 </details>
 
 <details><summary>Colour Scheme</summary>
